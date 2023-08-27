@@ -1,4 +1,3 @@
-import Button from './components/Button';
-import Header from './components/Header';
+import Testament from './components/Testament';
 
-export { Button, Header };
+export { Testament };

@@ -1,77 +1,127 @@
+@import url("./assets/fonts/fonts.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+svg {
+  width: 200px;
+  height: 45px;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+svg text {
+  animation: stroke 3s infinite alternate;
+  stroke-width: 4;
+  stroke: #FFFFFF;
+  font-size: 50px;
 }
-a:hover {
-  color: #535bf2;
+
+@media only screen and (min-width: 924px) {
+  .burger-menu, .sub-nav-menu {
+    display: none;
+    --menu-status: none;
+  }
+}
+
+@media only screen and (max-width: 925px) {
+  .burger-menu {
+    display: visible;
+  }
+
+  .main-menu {
+    display: none;
+  }
+}
+
+:root {
+    --menu-status: none;
+}
+
+.sub-nav-menu {
+  display: var(--menu-status);
+}
+
+
+
+
+@keyframes stroke {
+  0% {
+    fill: rgba(255, 255, 255, 0);
+    stroke: rgba(255, 255, 255, 1);
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 2;
+  } 
+  
+  70% {
+    fill:rgba(255, 255, 255, 0); 
+    stroke:rgba(255, 255, 255, 1);
+  }
+
+  80% {
+    fill:rgba(255, 255, 255, 0); 
+    stroke:rgba(255, 255, 255, 1);
+    stroke-width: 3;
+  }
+
+  100% {
+    fill:rgba(255, 255, 255, 1); 
+    stroke:rgba(255, 255, 255, 0);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+}
+/* .intro-text {
+  position: relative;
+}
+.intro-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 6vh;
+  width: 100%;
+  background: rgb(18, 18, 31);
+  border-left: 2px solid white;
+  animation: typing 6s steps(19) infinite;
+}
+
+@keyframes typing {
+  100% {
+    left: 70%;
+    margin: 0 -36px 0 36px;
+  }
+  
+} */
+
+li {
+  cursor: pointer;
+}
+
+button:hover, li:hover {
+  color: rgb(6, 223, 223);
+  border-color: rgb(6, 223, 223);
+}
+
+* {
+  color:#FFFFFF;
+  animation: fadeIn 0.5s;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  background-color: rgb(18, 18, 31);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.card {
+  background-color: rgb(27, 27, 48);
+  border-radius: 0.25rem;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+.nav-menu ul li {
+  padding: 20px 0 20px 0;
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
-
-* {
-  animation: fadeIn 0.5s;
+  /* border: solid 2px white; */
 }
